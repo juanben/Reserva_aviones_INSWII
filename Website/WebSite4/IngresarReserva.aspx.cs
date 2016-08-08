@@ -40,6 +40,17 @@ public partial class IngresarReserva : System.Web.UI.Page
         TextBox4.Text = "";
         TextBox5.Text = "";
         Response.Redirect("ReservaExitosa.aspx");
+        //correguir si no funciona
+        //reducir disponibilidad del avión
+        string rC = "Data Source=DESKTOP-4SF0VR3;Initial Catalog=Reservas;Integrated Security=True";
+        SqlConnection con1 = new SqlConnection(rC);
+        string up = "UPDATE VUELO    SET DISPONIBILIDAD = DISPONIBILIDAD - 1  WHERE NROVUELO =(SELECT   NROVUELO  FROM  RESERVA   WHERE IDPASAJERO= @IDPASAJERO )  GO";
+        SqlCommand cmd1 = new SqlCommand(up, con1);
+        con1.Open();
+        cmd1.CommandType = CommandType.Text;
+        cmd1.Parameters.Add("@IDPASAJERO", SqlDbType.Int).Value = DropDownList1.SelectedValue;
+        cmd1.ExecuteNonQuery();
+        con1.Close();
 
     }
 

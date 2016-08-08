@@ -54,6 +54,7 @@ public partial class IngresoCliente : System.Web.UI.Page
         DropDownList1.ClearSelection();
         DropDownList2.ClearSelection();
         Response.Redirect("IngresarReserva.aspx?parametro="+TextBox8.Text);
+        
 
     }
 

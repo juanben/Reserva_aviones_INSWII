@@ -237,7 +237,7 @@
          <p>  
                 
              <p>
-                 <label>Numero de telefono:</label> <asp:TextBox ID="TextBox5" runat="server" CssClass="auto-style12" onkeypress="return solonumeros(event)"></asp:TextBox>
+                 <label>Numero de telefono:</label> <asp:TextBox ID="TextBox5" runat="server" CssClass="auto-style12" onkeypress="return solonumeros(event)" MaxLength="25"></asp:TextBox>
                  </p>
              <p>
               <label>Correo electronico:</label> <asp:TextBox ID="TextBox6" runat="server" CssClass="auto-style13" onmousemove="emailvalido()" ></asp:TextBox>   

@@ -18,7 +18,7 @@ public partial class IngresoVuelos : System.Web.UI.Page
     {
         SqlConnection con1 = new SqlConnection("Data Source=DESKTOP-4SF0VR3;Initial Catalog=Reservas;Integrated Security=True");
         con1.Open();
-        string ad = "insert into ITINERARIO values (@IDDESTINO, @ID_ORIGEN, @HORA, @FECHA)";
+        
         DateTime MyDate;
         MyDate = Convert.ToDateTime(Fecha.Text);
 
@@ -31,6 +31,7 @@ public partial class IngresoVuelos : System.Web.UI.Page
         }//borrar si no funciona
         else//borrar si no funciona
         {//borrar si no funciona
+            string ad = "insert into ITINERARIO values (@IDDESTINO, @ID_ORIGEN, @HORA, @FECHA)";
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-4SF0VR3;Initial Catalog=Reservas;Integrated Security=True");
             con.Open();
             SqlCommand cmd = new SqlCommand(ad, con);

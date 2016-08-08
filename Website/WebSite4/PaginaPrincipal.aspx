@@ -152,7 +152,7 @@
                 <tr>
                     <td class="auto-style2">Pasajeros:</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList3" runat="server" CssClass="auto-style15">
+                        <asp:DropDownList ID="DropDownList3" runat="server" CssClass="auto-style15" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged">
                             <asp:ListItem Value="1"></asp:ListItem>
                             <asp:ListItem Value="2"></asp:ListItem>
                             <asp:ListItem Value="3"></asp:ListItem>
